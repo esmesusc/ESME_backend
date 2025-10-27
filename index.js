@@ -38,4 +38,4 @@ app.listen(port, () => {
     console.log('Server is running...');
 })
 
-module.exports = app;
+// module.exports = app;
