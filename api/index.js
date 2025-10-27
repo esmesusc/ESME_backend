@@ -27,14 +27,15 @@ app.use(('/api/applicants'), applicantsPath)
 app.use(('/api/events'), eventsPath)
 app.use(('/api/autherize'), autherizationPath)
 
+
 app.get('/', (req, res) => {
     res.send('API is running...')
 })
 
 
-// const port = process.env.PORT || 4000
-// app.listen(port, () => {
-//     console.log('Server is running...');
-// })
+const port = process.env.PORT || 4000
+app.listen(port, () => {
+    console.log('Server is running...');
+})
 
 module.exports = app;
