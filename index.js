@@ -1,10 +1,11 @@
 const express = require('express')
 require('dotenv').config()
 const cors = require('cors')
+const path = require('path')
 
 const connectDB = require('./db')
 
-
+// Import routes
 const applicantsPath = require('./routes/applicantsRoute')
 const eventsPath = require('./routes/eventsRoute')
 const autherizationPath = require('./middleware/accessAuth')
@@ -44,4 +45,4 @@ app.listen(port, () => {
     console.log('Server is running...');
 })
 
-// module.exports = app;
+module.exports = app;
