@@ -11,7 +11,7 @@ const newApplicant = async (req, res) => {
         }
         const applicant = new Applicant(req.body);
         await applicant.save();
-        res.status(201).json({ success: true, message: 'Applicant sent successfully', applicant });
+        res.status(201).json({ success: true, message: 'Application sent successfully', applicant });
     } catch (error) {
         console.error('Error creating applicant:', error);
         res.status(500).json({ message: 'Server error: ', error });
