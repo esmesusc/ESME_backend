@@ -2,8 +2,7 @@ const express = require('express')
 require('dotenv').config()
 const cors = require('cors')
 const path = require('path')
-
-const connectDB = require('./db')
+const mongoose = require('mongoose')
 
 // Import routes
 const applicantsPath = require('./routes/applicantsRoute')
@@ -40,9 +39,12 @@ app.get('/', (req, res) => {
 })
 
 
-const port = process.env.PORT || 4000
-app.listen(port, () => {
-    console.log('Server is running...');
-})
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+    const port = process.env.PORT || 4000;
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
 
 module.exports = app;
