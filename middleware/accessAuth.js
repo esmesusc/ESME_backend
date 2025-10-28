@@ -1,4 +1,4 @@
-const { authMembers } = require('../securedata')
+const authMembers = JSON.parse(process.env.PASS_CODES || '[]')
 const { Router } = require('express')
 
 const router = Router()

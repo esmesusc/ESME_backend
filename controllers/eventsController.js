@@ -1,5 +1,6 @@
 const Event = require('../models/Event');
 const { validateNewEvent } = require('../utils/validation');
+const cloudinary = require('../utils/cloudinary');
 
 
 // Add a new Event

@@ -5,6 +5,7 @@ const path = require('path')
 const mongoose = require('mongoose')
 
 // Import routes
+const connectDB = require('./db')
 const applicantsPath = require('./routes/applicantsRoute')
 const eventsPath = require('./routes/eventsRoute')
 const autherizationPath = require('./middleware/accessAuth')
